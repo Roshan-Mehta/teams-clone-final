@@ -1,6 +1,6 @@
 # microsoft-teams-clone
 #### Steps to run the program in local: 
->Download the zip folder of repo or clone the repo
+>Download the zip folder of repo or clone the repo<br/>
 >run following command
 >> `npm install  //It will install all the necessary packages` <br/>
 >> `npm start  //It will start the server` 
@@ -8,5 +8,5 @@
 
 
 #### Home Page 
->Here you need to login/signup first
+>Here you need to login/signup first<br/>
 >Sign up by clicking *Join Now*
