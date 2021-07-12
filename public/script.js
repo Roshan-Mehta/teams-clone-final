@@ -11,6 +11,7 @@ var peer = new Peer(undefined, {
   path: "/peerjs",
   host: "/",
   port: "443",
+  // port: "8887",
 });
 
 let myVideoStream;
@@ -44,7 +45,8 @@ navigator.mediaDevices
 
     document.addEventListener("keydown", (e) => {
       if (e.which === 13 && chatInputBox.value != "") {
-        socket.emit("message", chatInputBox.value);
+        var userEmail = document.getElementById("userEmail").textContent;
+        socket.emit("message", {userEmail:userEmail, msg: chatInputBox.value});
         chatInputBox.value = "";
       }
     });
@@ -52,7 +54,7 @@ navigator.mediaDevices
     socket.on("createMessage", (msg) => {
       console.log(msg);
       let li = document.createElement("li");
-      li.innerHTML = msg;
+      li.innerHTML = `<strong style="color:	#6495ED">${msg.userEmail.substring(0, 5)}.. : </strong>${msg.msg}`;
       all_messages.append(li);
       main__chat__window.scrollTop = main__chat__window.scrollHeight;
     });
