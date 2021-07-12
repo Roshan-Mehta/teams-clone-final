@@ -7,7 +7,7 @@
 >> Now your local program is all set!!
 
 
-#### Home Page 
+#### Steps to start your meeting...
 >Here you need to login/signup first<br/>
 >For login/signup, click "login/signup" in navbar or alternatively click 'Get started' in home page. 
 >Now click on 'login/signup Now', It will redirect you to login page. 
