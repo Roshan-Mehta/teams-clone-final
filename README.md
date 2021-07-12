@@ -10,3 +10,7 @@
 #### Home Page 
 >Here you need to login/signup first<br/>
 >Sign up by clicking *Join Now*
+>Give valid email and password
+>Here you can create new meeting or join existing new one by entering the ID.
+>Once prompted, Give permission of camera and mic
+>Enjoy your meeting!!
