@@ -8,11 +8,11 @@
 
 
 #### Steps to start your meeting...
->Here you need to login/signup first<br/>
->For login/signup, click "login/signup" in navbar or alternatively click 'Get started' in home page. 
->Now click on 'login/signup Now', It will redirect you to login page. 
->If you don't have an account, Sign up by clicking 'Join Now'. 
->Give valid email and password. 
->Here you can create new meeting or join existing new one by entering the ID.  
->Once prompted, Give permission of camera and mic.
->Enjoy your meeting!!
+>1. Here you need to login/signup first<br/>
+>2. For login/signup, click "login/signup" in navbar or alternatively click 'Get started' in home page. 
+>3. Now click on 'login/signup Now', It will redirect you to login page. 
+>4. If you don't have an account, Sign up by clicking 'Join Now'. 
+>5. Give valid email and password. 
+>6. Here you can create new meeting or join existing new one by entering the ID.  
+>7. Once prompted, Give permission of camera and mic.
+>8. Enjoy your meeting!!
