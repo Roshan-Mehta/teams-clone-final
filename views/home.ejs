@@ -39,7 +39,7 @@
                   <li><a class="nav-link scrollto" href="#about"><% if (user) { %>
                      Welcome, <%= user.email.substring(0, 10) %>..
                      <% } else { %>
-                     Log in
+                     Login/Signup
                      <% } %></a>
                   </li>
                </ul>
@@ -79,7 +79,7 @@
                            A real time video call and chat application just a click away!
                         </p>
                         <% if(!user) { %>
-                        <a href="/login" class="about-btn"><span>Login Now</span> <i class="bx bx-chevron-right"></i></a>
+                        <a href="/login" class="about-btn"><span>Login / Signup Now</span> <i class="bx bx-chevron-right"></i></a>
                         <% } else { %>
                         <a href="#counts" class="about-btn"><span>Join Room Now</span> <i class="bx bx-chevron-right"></i></a>
                         <% } %>
