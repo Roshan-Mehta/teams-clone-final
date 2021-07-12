@@ -1,0 +1,112 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>Teams Clone</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords"
+		content="Teams Clone" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //Meta tag Keywords -->
+	<!--/Style-CSS -->
+	<link rel="stylesheet" href="css/style2.css" type="text/css" media="all" />
+	<!--//Style-CSS -->
+</head>
+
+<body>
+	<!-- /login-section -->
+
+	<section class="w3l-forms-23">
+		<div class="forms23-block-hny">
+			<div class="wrapper">
+				<h1>Teams-Clone WebApp</h1>
+				<!-- if logo is image enable this   
+					<a class="logo" href="index.html">
+					  <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+					</a> 
+				-->
+				<div class="d-grid forms23-grids">
+					<div class="form23">
+						<div class="main-bg">
+							<h6 class="sec-one">Signup</h6>
+							<div class="speci-login first-look">
+								<img src="images/user.png" alt="" class="img-responsive">
+							</div>
+						</div>
+						<div class="bottom-content">
+							<form action="#" method="post">
+								<input type="email" name="email" class="input-form" placeholder="Your Email"
+										required="required" />
+								<a class="email error alert alert-primary"></a>
+								<input type="password" name="password" class="input-form"
+										placeholder="Your Password" required="required" />
+								<a class="password error"></a>
+								<button type="submit" class="loginhny-btn btn">Signup</button>
+							</form>
+							<p>Already a member? <a href="/login">Login Now!</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="w3l-copy-right text-center">
+					<p>© Microsoft Teams Clone. All rights reserved | made by
+						<a href="https://www.linkedin.com/in/roshan-kumar-/" target="_blank">Roshan</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- //login-section -->
+	<script>
+		  const form = document.querySelector('form');
+  const emailError = document.querySelector('.email.error');
+  const passwordError = document.querySelector('.password.error');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    // reset errors
+    emailError.textContent = '';
+    passwordError.textContent = '';
+    // get values
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+    try {
+      const res = await fetch('/signup', { 
+        method: 'POST', 
+        body: JSON.stringify({ email, password }),
+        headers: {'Content-Type': 'application/json'}
+      });
+    //   console.log(response);
+      const data = await res.json();
+      console.log(data);
+      if (data.errors) {
+        emailError.textContent = data.errors.email;
+        passwordError.textContent = data.errors.password;
+      }
+      if (data.user) {
+        location.assign('/home');
+      }
+    }
+    catch (err) {
+      console.log(err);
+    }
+  });
+	</script>
+
+
+
+</body>
+
+</html>
